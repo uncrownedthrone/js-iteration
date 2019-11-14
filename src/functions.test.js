@@ -26,7 +26,11 @@
  * }
  */
 
-// ...
+const yelling = words => {
+  return words.map(word => {
+    return word.toUpperCase()
+  })
+}
 
 /**
  *
@@ -35,7 +39,11 @@
  * the numbers multiplied by 2
  */
 
-// ...
+const doubleTrouble = numbers => {
+  return numbers.map(number => {
+    return number * 2
+  })
+}
 
 /*
  * 3) Define a function stringyIndexes() that takes an array of
@@ -43,21 +51,33 @@
  * suffixed with " is at index X" where X is the index of the element
  */
 
-// ...
+const stringyIndexes = atIndex => {
+  return atIndex.map((num, index) => {
+    return num + ' is at index ' + index
+  })
+}
 
 /*
  * 4) Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
 
-// ...
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(number => {
+    return number % 2 === 0
+  })
+}
 
 /*
  * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
 
-// ...
+const onlyTheEvenIndexedSurvive = evenIndex => {
+  return evenIndex.filter((_, index) => {
+    return index % 2 === 0
+  })
+}
 
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
@@ -73,7 +93,15 @@
  * }
  */
 
-// ...
+const bestMoviesOfTheYear = (movies, year) => {
+  return movies
+    .filter(movie => {
+      return movie.year === year && movie.score > 90
+    })
+    .map(movie => {
+      return movie.name
+    })
+}
 
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
