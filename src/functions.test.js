@@ -110,7 +110,7 @@ const bestMoviesOfTheYear = (movies, year) => {
  */
 
 const everyoneIsOdd = value => {
-  return value.filter(n => {
+  return value.filter((_, n) => {
     n % 2 === 1
   })
 }
